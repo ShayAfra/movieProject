@@ -260,3 +260,22 @@
 			});
 
 })(jQuery);
+
+
+
+//FETCH API OMDB
+document.querySelector('#search').addEventListener('click', getFetch)
+
+function getFetch(){
+  const choice = document.querySelector('input').value
+  const url = `http://www.omdbapi.com/?t=${choice}&apikey=8ffa8394`
+  fetch(url)
+      .then(res => res.json()) // parse response as JSON
+      .then(data => {
+        console.log(data)
+		document.querySelector('#title').innerText = data.Title
+      })
+      .catch(err => {
+          console.log(`error ${err}`)
+      });
+}
