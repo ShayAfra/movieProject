@@ -276,15 +276,15 @@ function getFetch(){
 			document.querySelector('#title').innerText = 'Please Try Again'	
 			document.querySelector('#actors').innerText = 'Actors'
 			document.querySelector('#title').innerText = 'Title'
-			document.querySelector('#moviePoster').src = Poster 
-			document.querySelector('#year').innerText = Year
-			document.querySelector('#rating').innerText = Rated
-			document.querySelector('#runTime').innerText = Runtime
-			document.querySelector('#plot').innerText = Plot
-			document.querySelector('#director').innerText = data.Director
-			document.querySelector('#writers').innerText = data.Writer
-			document.querySelector('#awards').innerText = data.Awards
-			document.querySelector('#boxOffice').innerText = data.BoxOffice
+			document.querySelector('#moviePoster').src = 'images/noom-peerapong-2uwFEAGUm6E-unsplash.jpg'
+			document.querySelector('#year').innerText = 'Year'
+			document.querySelector('#rating').innerText = 'Rating'
+			document.querySelector('#runTime').innerText = 'Runtime'
+			document.querySelector('#plot').innerText = "Plot"
+			document.querySelector('#director').innerText = 'Director'
+			document.querySelector('#writers').innerText = 'Writers'
+			document.querySelector('#awards').innerText = 'Awards'
+			document.querySelector('#boxOffice').innerText = 'BoxOffice'
 		}else{
 			console.log(data)
 			document.querySelector('#actors').innerText = data.Actors
