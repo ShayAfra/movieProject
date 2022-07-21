@@ -264,7 +264,7 @@
 
 
 //FETCH API OMDB
-document.querySelector('#search').addEventListener('click', getFetch)
+document.querySelector('#titleButton').addEventListener('click', getFetch)
 
 function getFetch(){
   const choice = document.querySelector('input').value
@@ -272,8 +272,39 @@ function getFetch(){
   fetch(url)
       .then(res => res.json()) // parse response as JSON
       .then(data => {
-        console.log(data)
-		document.querySelector('#title').innerText = data.Title
+		if (data.Response == 'False'){
+			document.querySelector('#title').innerText = 'Please Try Again'	
+			document.querySelector('#actors').innerText = 'Actors'
+			document.querySelector('#title').innerText = 'Title'
+			document.querySelector('#moviePoster').src = Poster 
+			document.querySelector('#year').innerText = Year
+			document.querySelector('#rating').innerText = Rated
+			document.querySelector('#runTime').innerText = Runtime
+			document.querySelector('#plot').innerText = Plot
+			document.querySelector('#director').innerText = data.Director
+			document.querySelector('#writers').innerText = data.Writer
+			document.querySelector('#awards').innerText = data.Awards
+			document.querySelector('#boxOffice').innerText = data.BoxOffice
+		}else{
+			console.log(data)
+			document.querySelector('#actors').innerText = data.Actors
+			document.querySelector('#title').innerText = data.Title
+			document.querySelector('#moviePoster').src = data.Poster 
+			document.querySelector('#year').innerText = data.Year
+			document.querySelector('#rating').innerText = data.Rated
+			document.querySelector('#runTime').innerText = data.Runtime
+			document.querySelector('#plot').innerText = data.Plot
+			document.querySelector('#director').innerText = data.Director
+			document.querySelector('#writers').innerText = data.Writer
+			document.querySelector('#awards').innerText = data.Awards
+			document.querySelector('#boxOffice').innerText = data.BoxOffice
+			for(let i = 0; i < data.Ratings.length;i++){
+				document.querySelector('#rated').innerText += data.Ratings[i].Source+ "   "
+				document.querySelector('#ratedVal').innerText += `     ${data.Ratings[i].Value}`
+			}
+
+
+		}
       })
       .catch(err => {
           console.log(`error ${err}`)
