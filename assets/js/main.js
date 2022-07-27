@@ -310,3 +310,30 @@ function getFetch(){
           console.log(`error ${err}`)
       });
 }
+
+
+
+
+//FETCH API TMDB
+document.querySelector('#secondButton').addEventListener('click', getFetchTwo)
+
+function getFetchTwo(){
+  const choice = document.querySelector('input').value
+  const url = `https://api.themoviedb.org/3/search/movie?api_key=4b90f02bb614756cd5f8155e9fb859ff&query=${choice}`
+  fetch(url)
+      .then(res => res.json()) // parse response as JSON
+      .then(data => {
+		const urlTwo = `https://api.themoviedb.org/3/movie/${data.results.id}/watch/providers?api_key=4b90f02bb614756cd5f8155e9fb859ff`
+		fetch(url)
+		.then(res => res.json()) // parse response as JSON
+		.then(data => {
+		 //THIS IS WHERE THE CODE FOR THE PROVIDER GOES
+		})
+		.catch(err => {
+			console.log(`error ${err}`)
+		});
+      })
+      .catch(err => {
+          console.log(`error ${err}`)
+      });
+}
