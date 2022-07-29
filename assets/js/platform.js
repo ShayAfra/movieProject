@@ -280,7 +280,13 @@ function getFetchTwo(){
                 .then(realData => {
                 //THIS IS WHERE THE CODE FOR THE PROVIDER GOES
                 console.log(realData)
-                console.log(realData.US.flatrate.provider_name)
+                console.log(realData.results.US.flatrate[0].provider_name)
+				let totalPlatforms = ""
+				for(let i = 0; i < realData.results.US.flatrate.length;i++){
+					totalPlatforms += realData.results.US.flatrate[i].provider_name
+				}
+				document.querySelector('#platforms').innerText = totalPlatforms
+
                 })
                 .catch(err => {
                     console.log(`error ${err}`)
