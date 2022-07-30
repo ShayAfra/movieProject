@@ -313,3 +313,28 @@ function getFetch(){
 
 
 
+
+
+
+
+//still need to learn react for this i think
+// document.addEventListener('load', getFetchThree)
+
+// function getFetchThree(){
+// //   const choice = document.querySelector('input').value
+//   const url = `https://movie-quotes-app.herokuapp.com/api/v1/quotes`
+//   fetch(url),{
+// 	headers: new Headers ({
+// 		'Authorization': 'Token'+btoa('token=qSHGMrjmPZ3dPyk0Ud0H2wtt')
+// 	})
+//   }
+//       .then(res => res.json()) // parse response as JSON
+//       .then(quoteData => {
+// 		//write code here
+// 		console.log(quoteData)
+// //		document.querySelector('#quoteOne').innerText = quote
+//       })
+//       .catch(err => {
+//           console.log(`error ${err}`)
+//       });
+// }
