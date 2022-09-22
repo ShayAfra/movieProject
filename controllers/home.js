@@ -3,4 +3,3 @@ module.exports = {
         res.render('index.ejs')
     }
 }
-//INDEX.JS may change, have not made the EJS files yet.
