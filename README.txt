@@ -1,30 +1,16 @@
-Editorial by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+My awesome moviePro project
+
+MoviePro is a web application where users can search movies and be returned with information on the movie. Features that are planned to be added include: watchlist, find the platform, and a scratch-off movie bucketlist poster.
+
+Link to project: https://themoviepro.netlify.app
 
 
-Say hello to Editorial, a blog/magazine-ish template built around a toggleable "locking"
-sidebar (scroll down to see what I mean) and an accordion-style menu. Not the usual landing
-page/portfolio affair you'd expect to see at HTML5 UP, but I figured for my 41st (!!!)
-template I'd change it up a little. Enjoy :)
+How It's Made:
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+Tech used: HTML, CSS, JavaScript, RESTful API
 
-(* = not included)
+Here's where you can go to town on how you actually built this thing. Write as much as you can here, it's totally fine if it's not too much just make sure you write something. If you don't have too much experience on your resume working on the front end that's totally fine. This is where you can really show off your passion and make up for that ten fold.
 
-AJ
-aj@lkn.io | @ajlkn
+Lessons Learned:
 
-
-Credits:
-
-	Demo Images:
-		Unsplash (unsplash.com)
-
-	Icons:
-		Font Awesome (fontawesome.io)
-
-	Other:
-		jQuery (jquery.com)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+From this project I learned two main things. The importance of planning a project and its features in its totality. This project also helped build my foundation of RESTful API's and GET requests. 
